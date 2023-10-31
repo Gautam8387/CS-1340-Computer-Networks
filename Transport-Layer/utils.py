@@ -48,8 +48,8 @@ courses_prereq = {
     "Probability and Statistics" : "Mathematics in Grades XI and XII. Alternatively, Quantitative Reasoning and Mathematical Thinking (FC 0306) + Calculus Enabler (MAT 1000)",
     "Linear Algebra" : "Check with the Mathematics Department.",
     "Calculus" : "Check with the Mathematics Department.",
-    "Physics": "TBD",
-    "Biology": "TBD",
+    "Physics": "Check with the Physics Department.",
+    "Biology": "Check with the Biology Department.",
     "Introduction to Computer Science" : "Mathematics in Grades XI and XII. Alternatively, a minimum of B grade in both Quantitative Reasoning and Mathematical Thinking (FC 0306) and Calculus (MAT 1000)",
     "Discrete Mathematics" : "Mathematics in Grades XI and XII. Alternatively, a minimum of B grade in both Quantitative Reasoning and Mathematical Thinking (FC 0306) and Calculus (MAT 1000)",
     "Data Structures and Algorithms" : "Introduction to Computer Science; Discrete Mathematics",
@@ -60,8 +60,9 @@ courses_prereq = {
     "Information Security" : "Data Structures and Algorithms; Probability and Statistics",
     "Design and Analysis of Algorithms" : "Data Structure and Algorithms; Linear Algebra",
     "Data Science and Management" : "Data Structures and Algorithms; Introduction to Machine Learning",
-    "Programming Languages and Translations" : "Data Structures and Algorithms; Theory of Computation",
-    "Embedded Systems" : "Computer Organisation and Systems"
+    "Programming Languages and Translation" : "Data Structures and Algorithms; Theory of Computation",
+    "Embedded Systems" : "Computer Organisation and Systems",
+    "Capstone Project" : "Talk to the advisor."
 }
 
 def q1():
