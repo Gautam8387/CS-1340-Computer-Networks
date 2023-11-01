@@ -1,6 +1,6 @@
 # Gautam Ahuja
 # CS-1340: Computer Networks
-# Assignment 4: Transport Layer - Transmission Control Protocol (TCP)
+# Assignment 3: Transport Layer - Transmission Control Protocol (TCP)
 # utils.py file enables the server to answer the questions asked by the client.
 # The ```utils.py``` file contains the following:
 # - ```question_list``` : A list of questions to be sent to the client.

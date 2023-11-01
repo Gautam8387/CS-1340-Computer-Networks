@@ -1,6 +1,6 @@
 ## Gautam Ahuja
 ## CS-1340: Computer Networks
-## Assignment 4: Transport Layer - Transmission Control Protocol (TCP)
+## Assignment 3: Transport Layer - Transmission Control Protocol (TCP)
 ## Documentation
 
 ### Server (```server.py```)
@@ -29,3 +29,16 @@ The ```utils.py``` file enables the server to answer the questions asked by the 
 - ```q1()``` : A function that returns the answer to question 1.
 - ```q2()``` : A function that returns the answer to question 2.
 - ```q3()``` : ... and so on.
+
+### To Run:
+Use the following commands to run the server and client:
+- Set up the server Host IP and Port in ```server.py```. Execute the following command to run the server:
+    - The Server can support multiple clients (10) at a time in a multithreaded manner.
+```
+python3 server.py
+```
+- Set up the IP and Port in ```client.py``` (same as server). Execute the following command to run the client:
+```
+python3 client.py
+```
+- The client will ask for the question number. Enter the question number and press enter.

@@ -1,6 +1,6 @@
 # Gautam Ahuja
 # CS-1340: Computer Networks
-# Assignment 4: Transport Layer - Transmission Control Protocol (TCP)
+# Assignment 3: Transport Layer - Transmission Control Protocol (TCP)
 # client.py
 # This file contains the client-side code for the TCP implementation of the CS Course Advisor.
 # The client is responsible for receiving the question list from the server and sending the question number to the server.
@@ -31,7 +31,7 @@ print(client_socket.recv(1024).decode())
 # ============================= CLIENT TCP COMMUNICATION SETUP ============================= #
 ## Continuously listen for user input
 while True:
-    question_number = input()
+    question_number = input("(main) > ")
     # Check if the input is a valid integer or 'q'
     if question_number.isdigit():
         question_number = int(question_number)
@@ -51,7 +51,7 @@ while True:
         # Receive a question from the server
         print(client_socket.recv(1024).decode())
         # send user input to the server
-        course_name = input()
+        course_name = input("(main/pre-req) > ")
         client_socket.send(course_name.encode())
     
     # Print the response from the server

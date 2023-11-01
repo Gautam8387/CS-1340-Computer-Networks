@@ -1,6 +1,6 @@
 # Gautam Ahuja
 # CS-1340: Computer Networks
-# Assignment 4: Transport Layer - Transmission Control Protocol (TCP)
+# Assignment 3: Transport Layer - Transmission Control Protocol (TCP)
 # server.py
 # This file contains the server-side code for the TCP implementation of the CS Course Advisor.
 # The server is responsible for sending the question list to the client and receiving the client's question number.
@@ -25,15 +25,15 @@ import threading
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-# Set up Server IP and Port
-IP = '127.0.0.1'
+# Set up Server HOST and Port
+HOST = '127.0.0.1'
 PORT = 5000
 
 # Bind the socket to the port
-server.bind((IP, PORT))
+server.bind((HOST, PORT))
 server.listen(10)
 print("Server UP and Running...")
-print(f"Listening on {IP}:{PORT}\nWaiting for a Connection...\n\n")
+print(f"Listening on {HOST}:{PORT}\nWaiting for a Connection...\n\n")
 
 # ============================= CLIENT TCP COMMUNICATION SETUP ============================= #
 
@@ -62,7 +62,7 @@ def client_handler(client_socket, client_address):
             continue
         # Else, call the function corresponding to the question_number
         if (question_number == 9):
-            client_socket.send("------------------------------\n(pre-req) Please enter the course name: ".encode())
+            client_socket.send("------------------------------\nPlease enter the course name:\n".encode())
             course_name = client_socket.recv(1024).decode()
             to_send = q9(course_name)
         else:
