@@ -40,9 +40,13 @@ while True:
         if question_number.lower() == 'q':
             client_socket.send(question_number.encode())
             print(client_socket.recv(2048).decode())
+            continue
+        elif question_number.lower() == 'quit':
+            client_socket.send(question_number.encode())
+            print(client_socket.recv(2048).decode())
             break
         else:
-            print("Invalid input. Please enter a valid integer or 'q'.")
+            print("Invalid input. Please enter a valid integer or 'q' for questions or 'quit'.")
             continue
     # Send the question number to the server
     client_socket.send(str(question_number).encode())

@@ -47,10 +47,13 @@ def client_handler(client_socket, client_address):
         question_number = client_socket.recv(1024).decode()
         # If client sends 'q', close connection with client
         if question_number == 'q':
-            break
+            ques_list(client_socket)
+            continue
         # Check if the question_number can be converted to an integer
+        if question_number == 'quit':
+            break
         if not question_number.isdigit():
-            to_invalid = '''------------------------------\nInvalid input. Please enter a valid integer or 'q'.\n------------------------------'''
+            to_invalid = '''------------------------------\nInvalid input. Please enter a valid integer or or 'q' for questions or 'quit'.\n------------------------------'''
             next(client_socket, to_invalid)
             continue
         # Convert question_number to int
