@@ -198,7 +198,7 @@ def q10():
     answer += "\tElective 3 (4 credits)"
     return answer
 
-def init(clientsocket):
+def init(client_socket):
     to_send = '''[GAUTAM AHUJA]
 
 Welcome to the CS Course Advisor!
@@ -209,14 +209,23 @@ List of questions:
     to_send += questions_string
     to_send += '''
 ======================================================
-(main) Enter the question number (or 'q' to quit): '''
-    clientsocket.send(to_send.encode())
+(main) Enter the question number (or 'or 'q' for questions or 'quit' to quit): '''
+    client_socket.send(to_send.encode())
 
-def next(clientsocket, optional=""):
+def ques_list(client_socket):
+    to_send = '''List of questions:\n'''
+    questions_string = '\n'.join(question_list)
+    to_send += questions_string
+    to_send += '''
+======================================================
+(main) Enter the question number (or 'or 'q' for questions or 'quit' to quit): '''
+    client_socket.send(to_send.encode())
+
+def next(client_socket, optional=""):
     to_send = optional + '''
 
-(main) Enter the next question number (or 'q' to quit): '''
-    clientsocket.send(to_send.encode())
+(main) Enter the next question number (or 'or 'q' for questions or 'quit' to quit): '''
+    client_socket.send(to_send.encode())
 
 # Answer List
 answer_list = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
